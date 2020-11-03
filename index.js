@@ -17,4 +17,8 @@ function toggleNavbar() {
     // hamburger.style.position = "static";
   }
 }
+
+// deactivate navbar when contact clicked
+const contact = document.querySelector(".contactButton");
+contact.addEventListener("click", toggleNavbar);
 // toggleNavbar();

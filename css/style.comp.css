@@ -7,14 +7,17 @@
 *:after {
   box-sizing: border-box; }
 
+html {
+  scroll-behavior: smooth; }
+
 body {
   position: relative;
-  scroll-behavior: smooth;
   line-height: 1.5;
   font-family: "Roboto", sans-serif;
   background: #0f0f0f;
   color: #f0f0f0;
-  margin: 0; }
+  margin: 0;
+  padding: 0; }
 
 a,
 a:visited,
@@ -62,19 +65,40 @@ ul {
     transform: translateY(0);
     opacity: 1; } }
 
+.moveUp--one {
+  margin-top: -5vh; }
+
+.moveUp--two {
+  margin-top: -10vh; }
+
+.moveUp--three {
+  margin-top: -15vh; }
+
+.marginTop--one {
+  margin-top: 5%; }
+
+.paddingBottom {
+  margin-bottom: 20%; }
+  @media (min-width: 650px) {
+    .paddingBottom {
+      margin: 0; } }
+
+@media (min-width: 650px) {
+  .allText {
+    padding: 0 5% !important; } }
+
 .red {
-  padding: 3em 0 0;
-  background: var(--primary-red);
-  clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 95%); }
+  padding: 5em 0 0;
+  background: linear-gradient(135deg, red 0%, #960000 100%);
+  clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 95%);
+  h1-padding: 1em 10% 0; }
   @media (min-width: 650px) {
     .red {
       clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 90%);
       padding: 3em 0; } }
   @media (min-width: 650px) {
     .red {
-      padding: 3em 0 10em; } }
-  .red h1 {
-    padding: 1em 10% 0; }
+      padding: 3em 0 5em; } }
 
 .article {
   overflow: hidden;
@@ -88,8 +112,8 @@ ul {
         flex-direction: row;
         padding: 0; } }
     .article__container div {
-      flex: 1 0;
-      margin-bottom: 2em; }
+      margin-bottom: 1em;
+      flex: 1 0; }
   .article__textContainer {
     text-align: center;
     order: -1; }
@@ -99,26 +123,32 @@ ul {
         padding: 0 1em; } }
     @media (min-width: 900px) {
       .article__textContainer {
-        padding: 0 10% 0 10%; } }
+        padding: 0 10%; } }
     @media (min-width: 1000px) {
       .article__textContainer {
         font-size: 1.3rem; } }
     .article__textContainer p {
       text-align: left;
-      padding: 0.5em; }
+      padding: 0.3em 0; }
   .article__header {
+    padding: 0 10%;
     text-transform: capitalize;
     font-size: 1.8rem; }
     @media (min-width: 650px) {
       .article__header {
-        font-size: 2rem; } }
-    @media (min-width: 1000px) {
+        font-size: 2rem;
+        padding-top: 0.5em; } }
+    @media (min-width: 1100px) {
       .article__header {
-        font-size: 3.5rem; } }
+        font-size: 3rem; } }
   .article__image {
     height: auto;
-    max-width: 100%;
-    margin: 2em 0 0; }
+    max-width: 100%; }
+    @media (min-width: 1000px) {
+      .article__image {
+        margin: 2em 0 0; } }
+  .article__imageContainer {
+    position: relative; }
 
 .starjump {
   padding-bottom: 2em;
@@ -133,6 +163,12 @@ ul {
 
 .open {
   z-index: -1; }
+
+@media (min-width: 650px) {
+  .crossArmed {
+    position: absolute;
+    bottom: 0;
+    transform: scale(1.5); } }
 
 .button {
   padding: 0.75em 1.5em;
@@ -177,8 +213,7 @@ ul {
   background: var(--primary-red);
   max-width: 100%;
   padding: 10% 1em 2%;
-  clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 100%);
-  margin: -15vh 0 0 0; }
+  clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 100%); }
   @media (min-width: 850px) {
     .footer {
       justify-content: space-evenly;
@@ -302,6 +337,72 @@ ul {
     #hamburger {
       font-size: 3rem; } }
 
+.package {
+  background: var(--primary-red);
+  flex: 1 0;
+  margin: 0.5em;
+  border-radius: 0.5em;
+  overflow: hidden;
+  background: var(--primary-red);
+  padding: 1.5em; }
+  .package__header {
+    margin-top: 2em;
+    text-align: center;
+    font-size: 1.5rem; }
+    @media (min-width: 850px) {
+      .package__header {
+        font-size: 2.5rem; } }
+  .package p {
+    text-align: center; }
+
+.packagesContainer {
+  padding: 1em;
+  display: flex;
+  flex-flow: column;
+  justify-content: center; }
+  @media (min-width: 850px) {
+    .packagesContainer {
+      flex-direction: row;
+      padding: 3em; } }
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  padding: 1em; }
+  table tr {
+    padding: 0.25em;
+    text-transform: capitalize;
+    display: flex;
+    justify-content: space-between; }
+    table tr:not(:last-child) {
+      border-bottom: 1px solid white; }
+  table td:first-of-type {
+    white-space: nowrap; }
+
+.package__enquries {
+  text-align: center;
+  padding: 0.25em; }
+  .package__enquries a {
+    color: var(--primary-red) !important; }
+    .package__enquries a:hover {
+      color: white !important;
+      text-decoration: underline; }
+    @media (min-width: 450px) {
+      .package__enquries a {
+        font-size: 1.5rem; } }
+
+.package__disclaimer {
+  padding: 0 1em; }
+  .package__disclaimer span {
+    color: red; }
+  @media (min-width: 450px) {
+    .package__disclaimer {
+      font-size: 1.2rem;
+      padding: 0 2em; } }
+  @media (min-width: 850px) {
+    .package__disclaimer {
+      font-size: 1.5rem; } }
+
 .landing {
   display: flex;
   flex-flow: column nowrap;
@@ -309,8 +410,7 @@ ul {
   align-content: center;
   justify-content: center;
   min-height: 60vh;
-  padding: 1em;
-  margin-bottom: 10vh; }
+  padding: 1em; }
   @media (min-width: 450px) {
     .landing {
       align-items: center;
@@ -337,6 +437,39 @@ ul {
   .landing .button {
     text-align: center; }
 
+.landing__sub {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 90%);
+  height: 100vh;
+  background: white; }
+  @media (min-width: 650px) {
+    .landing__sub {
+      clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 90%); } }
+  .landing__sub--image {
+    max-width: 100%;
+    border-radius: 5em;
+    box-shadow: 0 0 10px -5px rgba(0, 0, 0, 0.2);
+    max-width: 100%;
+    max-height: auto; }
+    @media (min-width: 650px) {
+      .landing__sub--image {
+        max-width: 50%; } }
+
+.logo__web {
+  border-radius: 5em;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: all 0.25s; }
+  .logo__web:hover {
+    box-shadow: 0 0 10px -5px rgba(0, 0, 0, 0.2); }
+
+.copywrite {
+  height: 75%; }
+
 .container {
   position: relative; }
   .container img {
@@ -347,13 +480,16 @@ ul {
   justify-content: center;
   align-items: center;
   align-content: center; }
+  @media (min-width: 450px) {
+    .service {
+      margin: 5vh 0; } }
   .service__container {
     display: flex;
     flex-flow: column; }
     @media (min-width: 450px) {
       .service__container {
         flex-flow: row wrap;
-        width: 75%; } }
+        width: 85%; } }
   .service__link {
     color: white;
     display: flex;
