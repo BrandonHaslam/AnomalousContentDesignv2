@@ -126,10 +126,11 @@ ul {
         padding: 0 10%; } }
     @media (min-width: 1000px) {
       .article__textContainer {
-        font-size: 1.3rem; } }
+        font-size: 1.5rem; } }
     .article__textContainer p {
       text-align: left;
-      padding: 0.3em 0; }
+      padding: 0.2em 0;
+      margin: 0.5em; }
   .article__header {
     padding: 0 10%;
     text-transform: capitalize;
@@ -170,6 +171,13 @@ ul {
     bottom: 0;
     transform: scale(1.5); } }
 
+@media (min-width: 650px) {
+  .horn {
+    margin-left: -20%;
+    position: absolute;
+    bottom: 0;
+    transform: scale(1.2); } }
+
 .button {
   padding: 0.75em 1.5em;
   text-transform: capitalize;
@@ -181,7 +189,7 @@ ul {
   transition: all 0.25s;
   font-size: 1rem;
   box-shadow: 0 0 10px rgba(15, 15, 15, 0.5);
-  z-index: 2; }
+  z-index: 5; }
   @media (min-width: 850px) {
     .button {
       font-size: 1.3rem; } }
@@ -193,14 +201,15 @@ ul {
     background: var(--primary-red-bright);
     transition: all 0.25s; }
 
-.article .button:hover {
-  color: var(--primary-red-bright);
-  background: white;
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
-  transition: all 0.25s; }
-
-.article .button:active {
-  background: #0f0f0f; }
+.article .button {
+  z-index: 5; }
+  .article .button:hover {
+    color: var(--primary-red-bright);
+    background: white;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    transition: all 0.25s; }
+  .article .button:active {
+    background: #0f0f0f; }
 
 .red .button {
   background: #0f0f0f; }
@@ -468,7 +477,8 @@ table {
     box-shadow: 0 0 10px -5px rgba(0, 0, 0, 0.2); }
 
 .copywrite {
-  height: 75%; }
+  height: 75%;
+  max-width: 100%; }
 
 .container {
   position: relative; }
