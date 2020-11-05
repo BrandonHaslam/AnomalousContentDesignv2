@@ -72,7 +72,10 @@ ul {
   margin-top: -10vh; }
 
 .moveUp--three {
-  margin-top: -15vh; }
+  margin-top: -20vh; }
+  @media (min-width: 650px) {
+    .moveUp--three {
+      margin-top: -5vh; } }
 
 .marginTop--one {
   margin-top: 5%; }
@@ -88,13 +91,13 @@ ul {
     padding: 0 5% !important; } }
 
 .red {
-  padding: 5em 0 0;
   background: linear-gradient(135deg, red 0%, #960000 100%);
-  clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 95%);
-  h1-padding: 1em 10% 0; }
+  clip-path: polygon(0 0, 100% 2%, 100% 100%, 0 98%);
+  padding: 2em 1em;
+  h1-padding: 2em 10% 0; }
   @media (min-width: 650px) {
     .red {
-      clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 90%);
+      clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 95%);
       padding: 3em 0; } }
   @media (min-width: 650px) {
     .red {
@@ -106,9 +109,10 @@ ul {
   .article__container {
     display: flex;
     flex-direction: column;
-    padding: 0 1em; }
+    padding: 2em 1em; }
     @media (min-width: 650px) {
       .article__container {
+        padding: 4em 1em;
         flex-direction: row;
         padding: 0; } }
     .article__container div {
@@ -123,25 +127,26 @@ ul {
         padding: 0 1em; } }
     @media (min-width: 900px) {
       .article__textContainer {
-        padding: 0 10%; } }
+        padding: 5% 10%; } }
     @media (min-width: 1000px) {
       .article__textContainer {
-        font-size: 1.5rem; } }
+        font-size: 1.2rem; } }
     .article__textContainer p {
       text-align: left;
       padding: 0.2em 0;
       margin: 0.5em; }
   .article__header {
-    padding: 0 10%;
+    padding: 10% 10% 0%;
     text-transform: capitalize;
-    font-size: 1.8rem; }
+    font-size: 1.8rem;
+    text-align: left; }
     @media (min-width: 650px) {
       .article__header {
         font-size: 2rem;
         padding-top: 0.5em; } }
-    @media (min-width: 1100px) {
+    @media (min-width: 1000px) {
       .article__header {
-        font-size: 3rem; } }
+        font-size: 2.5rem; } }
   .article__image {
     height: auto;
     max-width: 100%; }
@@ -156,10 +161,10 @@ ul {
   order: 100; }
   @media (min-width: 650px) {
     .starjump {
-      margin-left: -20%;
       animation: infinite scaleLoop 3s; } }
   @media (min-width: 1200px) {
     .starjump {
+      margin-left: -20%;
       padding-bottom: 0; } }
 
 .open {
@@ -179,6 +184,7 @@ ul {
     transform: scale(1.2); } }
 
 .button {
+  display: inline-block;
   padding: 0.75em 1.5em;
   text-transform: capitalize;
   border-radius: 2em;
@@ -188,11 +194,7 @@ ul {
   font-weight: bolder;
   transition: all 0.25s;
   font-size: 1rem;
-  box-shadow: 0 0 10px rgba(15, 15, 15, 0.5);
-  z-index: 5; }
-  @media (min-width: 850px) {
-    .button {
-      font-size: 1.3rem; } }
+  box-shadow: 0 0 10px rgba(15, 15, 15, 0.5); }
   .button:hover {
     color: white;
     border: 2px solid black;
@@ -223,6 +225,9 @@ ul {
   max-width: 100%;
   padding: 10% 1em 2%;
   clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 100%); }
+  @media (min-width: 650px) {
+    .footer {
+      margin: -15vh 0 0 0; } }
   @media (min-width: 850px) {
     .footer {
       justify-content: space-evenly;
@@ -354,10 +359,18 @@ ul {
   overflow: hidden;
   background: var(--primary-red);
   padding: 1.5em; }
+  @media (min-width: 850px) {
+    .package {
+      margin: 1em; } }
   .package__header {
-    margin-top: 2em;
+    padding: 0.5em;
+    margin-top: 1em;
     text-align: center;
     font-size: 1.5rem; }
+    @media (min-width: 650px) {
+      .package__header {
+        margin: unset;
+        font-size: 2rem; } }
     @media (min-width: 850px) {
       .package__header {
         font-size: 2.5rem; } }
@@ -372,7 +385,7 @@ ul {
   @media (min-width: 850px) {
     .packagesContainer {
       flex-direction: row;
-      padding: 3em; } }
+      padding: 1em; } }
 
 table {
   border-collapse: collapse;
@@ -458,12 +471,13 @@ table {
     .landing__sub {
       clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 90%); } }
   .landing__sub--image {
-    max-width: 100%;
     border-radius: 5em;
-    box-shadow: 0 0 10px -5px rgba(0, 0, 0, 0.2);
     max-width: 100%;
     max-height: auto; }
     @media (min-width: 650px) {
+      .landing__sub--image {
+        max-width: 60%; } }
+    @media (min-width: 1000px) {
       .landing__sub--image {
         max-width: 50%; } }
 
@@ -477,8 +491,11 @@ table {
     box-shadow: 0 0 10px -5px rgba(0, 0, 0, 0.2); }
 
 .copywrite {
-  height: 75%;
+  height: 50%;
   max-width: 100%; }
+  @media (min-width: 850px) {
+    .copywrite {
+      height: 75%; } }
 
 .container {
   position: relative; }
