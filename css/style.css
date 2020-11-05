@@ -77,8 +77,17 @@ ul {
     .moveUp--three {
       margin-top: -5vh; } }
 
+.moveUp--four {
+  margin-top: -20vh; }
+  @media (min-width: 650px) {
+    .moveUp--four {
+      margin-top: -50vh; } }
+
 .marginTop--one {
   margin-top: 5%; }
+
+.marginTop--two {
+  margin-top: 10%; }
 
 .paddingBottom {
   margin-bottom: 20%; }
@@ -88,20 +97,30 @@ ul {
 
 @media (min-width: 650px) {
   .allText {
-    padding: 0 5% !important; } }
+    padding: 5% !important; } }
+
+@media (min-width: 650px) {
+  .marketing {
+    padding: 5% 0 0 10% !important; } }
+
+.consistency {
+  text-align: center;
+  padding: 0 !important; }
+  @media (min-width: 650px) {
+    .consistency {
+      padding: 2em !important; } }
 
 .red {
   background: linear-gradient(135deg, red 0%, #960000 100%);
   clip-path: polygon(0 0, 100% 2%, 100% 100%, 0 98%);
-  padding: 2em 1em;
-  h1-padding: 2em 10% 0; }
+  padding: 2em 1em; }
   @media (min-width: 650px) {
     .red {
       clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 95%);
       padding: 3em 0; } }
   @media (min-width: 650px) {
     .red {
-      padding: 3em 0 5em; } }
+      padding: 5em 0; } }
 
 .article {
   overflow: hidden;
@@ -118,6 +137,10 @@ ul {
     .article__container div {
       margin-bottom: 1em;
       flex: 1 0; }
+    .article__container ul {
+      padding: 0 10%; }
+    .article__container li {
+      text-align: left; }
   .article__textContainer {
     text-align: center;
     order: -1; }
@@ -131,6 +154,9 @@ ul {
     @media (min-width: 1000px) {
       .article__textContainer {
         font-size: 1.2rem; } }
+    @media (min-width: 1200px) {
+      .article__textContainer {
+        font-size: 1.4rem; } }
     .article__textContainer p {
       text-align: left;
       padding: 0.2em 0;
@@ -140,6 +166,9 @@ ul {
     text-transform: capitalize;
     font-size: 1.8rem;
     text-align: left; }
+    @media (min-width: 450px) {
+      .article__header {
+        padding: 5% 10% 0; } }
     @media (min-width: 650px) {
       .article__header {
         font-size: 2rem;
@@ -147,6 +176,12 @@ ul {
     @media (min-width: 1000px) {
       .article__header {
         font-size: 2.5rem; } }
+    @media (min-width: 1200px) {
+      .article__header {
+        font-size: 2.8rem; } }
+  @media (min-width: 650px) {
+    .article .newcastleHeader {
+      width: 80%; } }
   .article__image {
     height: auto;
     max-width: 100%; }
@@ -161,14 +196,16 @@ ul {
   order: 100; }
   @media (min-width: 650px) {
     .starjump {
-      animation: infinite scaleLoop 3s; } }
+      transform: scale(1.4); } }
   @media (min-width: 1200px) {
     .starjump {
       margin-left: -20%;
       padding-bottom: 0; } }
 
 .open {
-  z-index: -1; }
+  z-index: -1;
+  transform: scale(0.85);
+  margin-top: 10; }
 
 @media (min-width: 650px) {
   .crossArmed {
@@ -178,9 +215,14 @@ ul {
 
 @media (min-width: 650px) {
   .horn {
-    margin-left: -20%;
+    z-index: -1;
     position: absolute;
-    bottom: 0;
+    bottom: 10%;
+    transform: scale(1.5); } }
+
+@media (min-width: 1000px) {
+  .horn {
+    margin-left: -20%;
     transform: scale(1.2); } }
 
 .button {
@@ -201,7 +243,8 @@ ul {
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
     cursor: pointer;
     background: var(--primary-red-bright);
-    transition: all 0.25s; }
+    transition: all 0.25s;
+    transform: scale(1.1); }
 
 @media (min-width: 650px) {
   .landing .button {
@@ -229,13 +272,14 @@ ul {
   text-align: center;
   flex-flow: column;
   position: relative;
+  text-align: left;
   background: var(--primary-red);
   max-width: 100%;
   padding: 10% 1em 2%;
   clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 100%); }
   @media (min-width: 650px) {
     .footer {
-      margin: -15vh 0 0 0; } }
+      margin: -20vh 0 0 0; } }
   @media (min-width: 850px) {
     .footer {
       justify-content: space-evenly;
@@ -311,7 +355,7 @@ ul {
   .navbar section {
     position: absolute;
     left: 0;
-    bottom: 5%;
+    bottom: 2%;
     display: flex;
     justify-content: space-around;
     width: 100vw; }
@@ -439,29 +483,35 @@ table {
   align-items: flex-start;
   align-content: center;
   justify-content: center;
-  min-height: 60vh;
-  padding: 1em; }
+  padding: 1em;
+  height: 80vh; }
   @media (min-width: 450px) {
     .landing {
+      min-height: 60vh;
       align-items: center;
       justify-content: unset; } }
   .landing h1 {
     animation: slideInLeft 2s, fadeIn 3s;
     font-size: 1.8rem;
     text-transform: uppercase;
+    font-weight: bolder;
     margin: 1em 0; }
     @media (min-width: 450px) {
       .landing h1 {
-        font-size: 3rem; } }
+        font-size: 2.5rem;
+        padding: 0 1em;
+        margin: 0;
+        max-width: 75%; } }
     @media (min-width: 850px) {
       .landing h1 {
-        font-size: 3.8rem;
+        max-width: 60%;
+        font-size: 3rem;
         padding: 0 1em; } }
     @media (min-width: 1100px) {
       .landing h1 {
         padding: 0 1em;
-        max-width: 70%;
-        font-size: 4rem; } }
+        max-width: 50%;
+        font-size: 3.8rem; } }
     .landing h1 span {
       color: var(--primary-red); }
   .landing .button {
