@@ -1,0 +1,135 @@
+.landing {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+  align-content: center;
+  justify-content: center;
+  padding: 1em;
+  height: 80vh;
+  // text-shadow: 0 0 5px red;
+  @media (min-width: 450px) {
+    height: 60vh;
+    align-items: center;
+    justify-content: unset;
+  }
+
+  & h1 {
+    animation: slideInLeft 2s, fadeIn 3s;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: bolder;
+    margin: 1em 0;
+    @media (min-width: 450px) {
+      font-size: 2.5rem;
+      padding: 0 1em;
+      margin: 0;
+      max-width: 75%;
+    }
+    @media (min-width: 850px) {
+      max-width: 60%;
+      font-size: 3rem;
+      padding: 0 1em;
+    }
+    @media (min-width: 1100px) {
+      padding: 0 1em;
+      max-width: 50%;
+      font-size: 3.8rem;
+    }
+    & span {
+      color: var(--primary-red);
+    }
+  }
+  .button {
+    text-align: center;
+  }
+}
+.landing__sub {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 90%);
+  height: 100vh;
+  @media (min-width: 650px) {
+    clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 90%);
+  }
+
+  background: white;
+  &--image {
+    border-radius: 5em;
+    // box-shadow: 0 0 10px -5px rgba(0, 0, 0, 0.2);
+    // padding: 5%;
+    max-width: 100%;
+    max-height: auto;
+    @media (min-width: 650px) {
+      max-width: 60%;
+    }
+    @media (min-width: 1000px) {
+      max-width: 50%;
+    }
+  }
+}
+
+.logo__web {
+  border-radius: 5em;
+  // box-shadow: 0 0 10px -5px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: all 0.25s;
+  &:hover {
+    box-shadow: 0 0 10px -5px rgba(0, 0, 0, 0.2);
+  }
+}
+.copywrite {
+  height: 50%;
+  max-width: 100%;
+  @media (min-width: 850px) {
+    height: 75%;
+  }
+}
+
+.squareThing {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 25vh;
+  div {
+    border-radius: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    border: 0.5em red solid;
+    @media (min-width: 650px) {
+      width: 75vw;
+      height: 75vh;
+    }
+  }
+  h1 {
+    padding: 0.5em;
+    text-transform: capitalize;
+    span {
+      color: red;
+    }
+    @media (min-width: 650px) {
+      text-align: center;
+      font-size: 1.8rem;
+      padding: 0;
+    }
+    @media (min-width: 1000px) {
+      text-align: center;
+      font-size: 2rem;
+      padding: 0;
+    }
+  }
+  p {
+    margin: 0;
+    padding: 0.75em;
+    @media (min-width: 650px) {
+      padding: 0.5em;
+      font-size: 1rem;
+    }
+  }
+}

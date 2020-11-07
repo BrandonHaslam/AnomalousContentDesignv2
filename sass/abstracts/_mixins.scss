@@ -1,0 +1,10 @@
+@mixin flexCenter {
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin iconHover {
+  color: var(--primary-red-bright);
+  transform: scale(1.1);
+}

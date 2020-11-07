@@ -1,0 +1,54 @@
+.footer {
+  display: flex;
+
+  text-align: center;
+  flex-flow: column;
+  position: relative;
+  text-align: left;
+  background: var(--primary-red);
+  max-width: 100%;
+  padding: 4em 1em 2em;
+  clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 100%);
+  @media (min-width: 650px) {
+    margin: -20vh 0 0 0;
+  }
+  @media (min-width: 850px) {
+    justify-content: space-evenly;
+    flex-flow: row nowrap;
+    clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
+  }
+  section {
+    flex: 1 0;
+    margin: 0.5em;
+  }
+  // footer icon
+  &__icon {
+    color: white;
+    font-size: 2rem;
+    margin: 0.1em;
+    padding: 0;
+    @media (min-width: 1000px) {
+      margin-right: 0.5em;
+    }
+    &:hover {
+      color: black;
+      transform: scale(1.1);
+    }
+  }
+
+  // icon container
+  &__icon--container {
+    display: flex;
+    flex-flow: nowrap;
+  }
+
+  // footer nav
+  ul {
+    list-style: none;
+  }
+  &__link {
+    &:hover {
+      color: black;
+    }
+  }
+}

@@ -1,0 +1,49 @@
+.button {
+  display: inline-block;
+  padding: 0.75em 1.5em;
+  text-transform: capitalize;
+  border-radius: 2em;
+  border: 2px solid var(--primary-red);
+  color: var(--primary-red);
+  background: rgb(15, 15, 15);
+  font-weight: bolder;
+  transition: all 0.2s;
+  font-size: 1rem;
+  box-shadow: 0 0 10px rgba(15, 15, 15, 0.5);
+  @media (min-width: 850px) {
+    // font-size: 1.3rem;
+  }
+  &:hover {
+    color: white;
+    border: 2px solid black;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+    background: var(--primary-red-bright);
+    transition: all 0.2s;
+    transform: scale(1.1);
+  }
+}
+.landing .button {
+  @media (min-width: 650px) {
+    font-size: 1.2rem;
+  }
+  @media (min-width: 1000px) {
+    font-size: 1.5rem;
+  }
+}
+// article buttons
+.article .button {
+  z-index: 5;
+  &:hover {
+    color: var(--primary-red-bright);
+    background: white;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    transition: all 0.2s;
+  }
+  &:active {
+    background: rgb(15, 15, 15);
+  }
+}
+.red .button {
+  border: 2px solid black;
+}

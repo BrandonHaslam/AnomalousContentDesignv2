@@ -1,0 +1,12 @@
+.logo {
+  max-width: 60%;
+  margin: 2%;
+  @media (min-width: 450px) {
+    max-width: 50%;
+    // margin: 0;
+  }
+  @media (min-width: 850px) {
+    max-width: 25%;
+    // margin: 0;
+  }
+}
