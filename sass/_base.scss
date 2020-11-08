@@ -1,0 +1,42 @@
+// Box Sizing
+:root {
+  --primary-red-bright: rgb(240, 0, 0);
+  --primary-red: rgb(220, 0, 0);
+}
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  position: relative;
+  line-height: 1.5;
+  font-family: "Roboto", sans-serif;
+  background: rgb(15, 15, 15);
+  color: rgb(240, 240, 240);
+  margin: 0;
+  padding: 0;
+}
+a,
+a:visited,
+a:active {
+  text-decoration: none;
+  color: white;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+//

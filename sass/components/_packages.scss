@@ -1,13 +1,12 @@
 .package {
-  background: var(--primary-red);
+  position: relative;
   flex: 1 0;
   margin: 0.5em 0;
   border-radius: 0.5em;
-  border: 1px solid white;
+  border: 2px solid white;
   overflow: hidden;
   background: var(--primary-red);
   padding: 1em;
-  box-shadow: 0 0 3px white;
   @media (min-width: 850px) {
     margin: 1em;
   }
@@ -29,6 +28,7 @@
   }
 }
 .packagesContainer {
+  align-items: flex-start;
   padding: 1em;
   display: flex;
   flex-flow: column;
@@ -44,7 +44,6 @@ table {
   padding: 1em;
   tr {
     padding: 0.25em;
-
     text-transform: capitalize;
     display: flex;
     justify-content: space-between;
@@ -81,5 +80,22 @@ table {
   }
   @media (min-width: 850px) {
     font-size: 1.5rem;
+  }
+}
+.socialPackage {
+  img {
+    height: 5rem;
+    max-width: 5rem;
+
+    border-radius: 0.5em;
+  }
+  text-align: center;
+  ul {
+    list-style: none;
+    padding: 0.5em;
+    border-bottom: 1px solid white;
+  }
+  h2 {
+    text-align: right;
   }
 }
