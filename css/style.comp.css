@@ -126,11 +126,14 @@ ul {
     .consistency__image {
       display: block;
       position: absolute;
-      bottom: 10%; } }
+      bottom: 15%; } }
   @media (min-width: 1000px) {
     .consistency__image {
       left: 10%;
-      transform: scale(1); } }
+      transform: scale(1.25); } }
+
+.consistency__header {
+  width: 60%; }
 
 .squareOne {
   content: "";
@@ -302,11 +305,12 @@ ul {
 .open {
   z-index: -1;
   transform: scale(0.85);
-  margin-top: 10; }
+  margin-bottom: -10vh; }
 
 .hoodie {
   transform: scale(1);
-  z-index: -1; }
+  z-index: -1;
+  margin-bottom: -4vh; }
   @media (min-width: 650px) {
     .hoodie {
       margin-bottom: 0;
