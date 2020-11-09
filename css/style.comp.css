@@ -579,17 +579,16 @@ textarea {
     .package {
       margin: 1em; } }
   .package__header {
-    padding: 0.5em;
     margin-top: 1em;
     text-align: center;
-    font-size: 1.5rem; }
+    font-size: 2rem; }
     @media (min-width: 650px) {
       .package__header {
         margin: unset;
-        font-size: 2rem; } }
+        font-size: 2.5rem; } }
     @media (min-width: 850px) {
       .package__header {
-        font-size: 2.5rem; } }
+        font-size: 2.8rem; } }
   .package p {
     text-align: center; }
 
@@ -643,6 +642,8 @@ table {
       font-size: 1.5rem; } }
 
 .socialPackage {
+  color: #242223;
+  font-weight: bolder;
   text-align: center; }
   .socialPackage img {
     height: 5rem;
