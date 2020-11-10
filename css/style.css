@@ -576,6 +576,8 @@ textarea {
       font-size: 3rem; } }
 
 .package {
+  font-weight: bolder;
+  color: #242223;
   position: relative;
   flex: 1 0;
   margin: 0.5em 0;
@@ -604,6 +606,11 @@ textarea {
         font-size: 2.8rem; } }
   .package p {
     text-align: center; }
+  .package__web {
+    display: flex;
+    justify-content: center; }
+    .package__web img {
+      max-width: 25%; }
 
 .packagesContainer {
   align-items: flex-start;
@@ -643,6 +650,7 @@ table {
         font-size: 1.5rem; } }
 
 .package__disclaimer {
+  text-align: center;
   padding: 0 1em; }
   .package__disclaimer span {
     color: red; }
@@ -655,8 +663,6 @@ table {
       font-size: 1.5rem; } }
 
 .socialPackage {
-  color: #242223;
-  font-weight: bolder;
   text-align: center; }
   .socialPackage img {
     height: 5rem;
